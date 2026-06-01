@@ -1,0 +1,487 @@
+
+
+/* -------------------------------------------
+   Variables de Design & Reset
+------------------------------------------- */
+:root {
+    --bg-color: #FAFAFA;
+    --text-primary: #1A1A1A;
+    --text-muted: #666666;
+    --accent: #2C3E50; /* Bleu Nuit */
+    --accent-light: #F4F6F8;
+    --white: #FFFFFF;
+    --font-titles: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(253, 255, 240);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* -------------------------------------------
+   Header
+------------------------------------------- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4%;
+    background-color: var(--white);
+    border-bottom: 1px solid #EAEAEA;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--font-titles);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    margin: 0 15px;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+/* -------------------------------------------
+   Layout Principal de Recherche
+------------------------------------------- */
+.search-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+/* Barre de filtres (Sidebar) */
+.filters-sidebar {
+    flex: 0 0 300px;
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    height: fit-content;
+    border: 1px solid #EAEAEA;
+}
+
+.filters-sidebar h3 {
+    font-family: var(--font-titles);
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filter-group input[type="text"],
+.filter-group input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+.slider {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.range-values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    text-transform: none;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.btn-filter {
+    width: 100%;
+    background-color: var(--text-primary);
+    color: var(--white);
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Zone des Résultats */
+.results-section {
+    flex: 1;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.results-header h2 {
+    font-family: var(--font-titles);
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.sort-select {
+    padding: 8px 12px;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    background-color: var(--white);
+    font-family: var(--font-body);
+}
+
+/* Grille et Cartes de Biens */
+.properties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.property-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #EAEAEA;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.property-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.property-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--white);
+    color: var(--text-primary);
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.property-image {
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+}
+
+.property-content {
+    padding: 20px;
+}
+
+.property-tag {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.property-title {
+    font-family: var(--font-titles);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.property-location {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+.property-specs {
+    font-size: 13px;
+    color: var(--text-primary);
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.property-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.property-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--text-primary);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-primary);
+    color: var(--white);
+}
+
+/* -------------------------------------------
+   Media Query pour le Mobile
+------------------------------------------- */
+@media (max-width: 900px) {
+    .search-container {
+        flex-direction: column;
+    }
+    .filters-sidebar {
+        flex: none;
+        width: 100%;
+    }
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+* Réinitialisation de base et police */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styles du Footer */
+.site-footer {
+    background-color: #1a1e25; /* Bleu nuit très sombre, pro et moderne */
+    color: #cbd5e1; /* Gris clair pour une excellente lisibilité */
+    padding: 60px 0 20px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px; /* Évite que les colonnes deviennent trop étroites */
+}
+
+/* Style spécifique pour la marque/logo */
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-column h3 span {
+    color: #3b82f6; /* Accentuation bleue pour le côté pro/tech */
+}
+
+.footer-column h4 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Petite barre sous les titres de colonnes */
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #3b82f6;
+}
+
+.footer-column p {
+    margin-bottom: 20px;
+    color: #94a3b8;
+}
+
+/* Listes de liens */
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Effet de survol sur les liens */
+.footer-column ul li a:hover {
+    color: #3b82f6;
+    padding-left: 5px;
+}
+
+/* Icônes Réseaux Sociaux */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: #2e3542;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background-color: #3b82f6;
+    transform: translateY(-3px);
+}
+
+/* Formulaire Newsletter */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #2e3542;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: #3b82f6;
+}
+
+.newsletter-form button {
+    padding: 12px 15px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #2563eb;
+}
+
+/* Ligne de Copyright tout en bas */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 20px 20px 0 20px;
+    border-top: 1px solid #2e3542;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* RESPONSIVE : Ajustement pour les tablettes et mobiles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-column {
+        width: 100%;
+    }
+}

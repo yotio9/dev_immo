@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizon Privé - Nos Biens</title>
+    <link rel="stylesheet" href="acheter.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="logo";"><a href="accueil.html">Horizon Privé</a></div>
+        <nav class="nav-links">
+            <a href="acheter.html">Acheter</a>
+            <a href="louer.html">Louer</a>
+            <a href="vendre.html">Vendre</a>
+            <a href="a-propos.html">À propos</a>
+        </nav>
+        <button class="btn-primary">Estimer mon bien</button>
+    </header>
+
+    <main class="search-container">
+        
+        <aside class="filters-sidebar">
+            <h3>Filtrer la recherche</h3>
+            
+            <div class="filter-group">
+                <label for="location">Localisation</label>
+                <input type="text" id="location" placeholder="Ex: Man,cote d'ivoire ...">
+            </div>
+
+            <div class="filter-group">
+                <label>Budget Maximum</label>
+                <input type="range" min="200000" max="2000000" step="50000" value="1200000" class="slider">
+                <div class="range-values"><span>200k €</span><span>2M €</span></div>
+            </div>
+
+            <div class="filter-group">
+                <label>Surface Minimum</label>
+                <input type="number" placeholder="en m²">
+            </div>
+
+            <div class="filter-group">
+                <label>Critères spécifiques</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> Terrasse / Balcon</label>
+                    <label><input type="checkbox"> Piscine</label>
+                    <label><input type="checkbox"> Exposition Sud</label>
+                </div>
+            </div>
+
+            <button class="btn-filter">Appliquer les filtres</button>
+        </aside>
+
+        <section class="results-section">
+            <div class="results-header">
+                <h2>148 Biens d'exception trouvés</h2>
+                <select class="sort-select">
+                    <option>Trier par : Prix croissants</option>
+                    <option>Trier par : Prix décroissants</option>
+                    <option>Trier par : Les plus récents</option>
+                </select>
+            </div>
+
+            <div class="properties-grid">
+                
+                <article class="property-card">
+                    <div class="property-badge">Coup de cœur</div>
+                    <div class="property-image" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80');"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Quartier Calme • Note : 9.4/10</span>
+                        <h4 class="property-title">Villa Lumineuse avec Patio</h4>
+                        <p class="property-location">Bouaké, Côte d'Ivoire</p>
+                        <div class="property-specs">
+                            <span>145 m²</span>
+                            <span>•</span>
+                            <span>4 Pièces</span>
+                            <span>•</span>
+                            <span>Classe A</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">850 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/1134203487423058755.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Vue Dégagée • Note : 8.9/10</span>
+                        <h4 class="property-title">Appartement Design Plein Sud</h4>
+                        <p class="property-location">Bouaké</p>
+                        <div class="property-specs">
+                            <span>82 m²</span>
+                            <span>•</span>
+                            <span>3 Pièces</span>
+                            <span>•</span>
+                            <span>Classe B</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 120 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/1134203487423058755.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Prestations Luxe • Note : 9.1/10</span>
+                        <h4 class="property-title">Maison Contemporaine & Piscine</h4>
+                        <p class="property-location">Bouaké</p>
+                        <div class="property-specs">
+                            <span>210 m²</span>
+                            <span>•</span>
+                            <span>6 Pièces</span>
+                            <span>•</span>
+                            <span>Classe A</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 750 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/393290979984133812.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Vue Dégagée • Note : 8.9/10</span>
+                        <h4 class="property-title">Appartement Design Plein Sud</h4>
+                        <p class="property-location">Yamoussoukro</p>
+                        <div class="property-specs">
+                            <span>82 m²</span>
+                            <span>•</span>
+                            <span>3 Pièces</span>
+                            <span>•</span>
+                            <span>Classe B</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 120 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/450993350203845227.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Prestations Luxe • Note : 9.1/10</span>
+                        <h4 class="property-title">Maison Contemporaine & Piscine</h4>
+                        <p class="property-location">Abidjan</p>
+                        <div class="property-specs">
+                            <span>210 m²</span>
+                            <span>•</span>
+                            <span>6 Pièces</span>
+                            <span>•</span>
+                            <span>Classe A</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 750 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+<article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/_\ \(11\).jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Vue Dégagée • Note : 8.9/10</span>
+                        <h4 class="property-title">Appartement Design Plein Sud</h4>
+                        <p class="property-location">assinie</p>
+                        <div class="property-specs">
+                            <span>82 m²</span>
+                            <span>•</span>
+                            <span>3 Pièces</span>
+                            <span>•</span>
+                            <span>Classe B</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 120 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/_\ \(12\).jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Prestations Luxe • Note : 9.1/10</span>
+                        <h4 class="property-title">Maison Contemporaine & Piscine</h4>
+                        <p class="property-location">Abidjan</p>
+                        <div class="property-specs">
+                            <span>210 m²</span>
+                            <span>•</span>
+                            <span>6 Pièces</span>
+                            <span>•</span>
+                            <span>Classe A</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 750 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+<article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/Decor\ -\ So\ pretty\ 😍\ _\ Facebook.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Vue Dégagée • Note : 8.9/10</span>
+                        <h4 class="property-title">Appartement Design Plein Sud</h4>
+                        <p class="property-location">Paris 16ème</p>
+                        <div class="property-specs">
+                            <span>82 m²</span>
+                            <span>•</span>
+                            <span>3 Pièces</span>
+                            <span>•</span>
+                            <span>Classe B</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 120 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/200269514675152318.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Prestations Luxe • Note : 9.1/10</span>
+                        <h4 class="property-title">Maison Contemporaine & Piscine</h4>
+                        <p class="property-location">Abidjan</p>
+                        <div class="property-specs">
+                            <span>210 m²</span>
+                            <span>•</span>
+                            <span>6 Pièces</span>
+                            <span>•</span>
+                            <span>Classe A</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 750 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+<article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/385409680644803375.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Vue Dégagée • Note : 8.9/10</span>
+                        <h4 class="property-title">Appartement Design Plein Sud</h4>
+                        <p class="property-location">Paris 16ème</p>
+                        <div class="property-specs">
+                            <span>82 m²</span>
+                            <span>•</span>
+                            <span>3 Pièces</span>
+                            <span>•</span>
+                            <span>Classe B</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 120 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/435512226489287457.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Prestations Luxe • Note : 9.1/10</span>
+                        <h4 class="property-title">Maison Contemporaine & Piscine</h4>
+                        <p class="property-location">Songon</p>
+                        <div class="property-specs">
+                            <span>210 m²</span>
+                            <span>•</span>
+                            <span>6 Pièces</span>
+                            <span>•</span>
+                            <span>Classe A</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 750 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+<article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/Дом\ для\ большой\ семьи.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Vue Dégagée • Note : 8.9/10</span>
+                        <h4 class="property-title">Appartement Design Plein Sud</h4>
+                        <p class="property-location">Bingerville</p>
+                        <div class="property-specs">
+                            <span>82 m²</span>
+                            <span>•</span>
+                            <span>3 Pièces</span>
+                            <span>•</span>
+                            <span>Classe B</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 120 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card">
+                    <div class="property-image" style="background-image: url(Images/💒.jpeg);"></div>
+                    <div class="property-content">
+                        <span class="property-tag">Prestations Luxe • Note : 9.1/10</span>
+                        <h4 class="property-title">Maison Contemporaine & Piscine</h4>
+                        <p class="property-location">Songon</p>
+                        <div class="property-specs">
+                            <span>210 m²</span>
+                            <span>•</span>
+                            <span>6 Pièces</span>
+                            <span>•</span>
+                            <span>Classe A</span>
+                        </div>
+                        <div class="property-footer">
+                            <span class="property-price">1 750 000 €</span>
+                            <button class="btn-secondary">Voir le bien</button>
+                        </div>
+                    </div>
+                </article>
+
+
+            </div>
+        </section>
+
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+            
+            <!-- Colonne 1: À propos / Logo -->
+            <div class="footer-column about-project">
+                <h3>Immo<span>Vision</span></h3>
+                <p>Votre partenaire de confiance pour trouver l'appartement ou la maison de vos rêves. Vente, location et estimation de biens immobiliers.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- Colonne 2: Liens de navigation -->
+            <div class="footer-column">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Acheter</a></li>
+                    <li><a href="#">Louer</a></li>
+                    <li><a href="#">Estimer mon bien</a></li>
+                    <li><a href="#">Nos agences</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 3: Liens Légaux / Contact -->
+            <div class="footer-column">
+                <h4>Informations</h4>
+                <ul>
+                    <li><a href="#">Contactez-nous</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Honoraires de l'agence</a></li>
+                </ul>
+            </div>
+
+            <!-- Colonne 4: Newsletter -->
+            <div class="footer-column footer-newsletter">
+                <h4>Alerte Immo</h4>
+                <p>Recevez nos dernières exclusivités immobilières directement dans votre boîte mail.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre adresse email" required>
+                    <button type="submit">S'inscrire</button>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- Bas du footer (Droits d'auteur) -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 ImmoVision. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

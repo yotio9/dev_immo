@@ -1,0 +1,516 @@
+/* -------------------------------------------
+   Variables de Design & Reset
+------------------------------------------- */
+:root {
+    --bg-color: #feffe4;
+    --text-primary: #1A1A1A;
+    --text-muted: #666666;
+    --accent: #2C3E50; /* Bleu Nuit */
+    --accent-light: #F4F6F8;
+    --white: #FFFFFF;
+    --font-titles: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* -------------------------------------------
+   Header
+------------------------------------------- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4%;
+    background-color: var(--white);
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.logo {
+    font-family: var(--font-titles);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-primary);
+    margin: 0 15px;
+    font-weight: 400;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+}
+
+/* -------------------------------------------
+   Galerie d'Images
+------------------------------------------- */
+.gallery-container {
+    display: flex;
+    height: 500px;
+    gap: 10px;
+    padding: 10px;
+    background-color: #000;
+}
+
+.main-image {
+    flex: 2;
+    background-size: cover;
+    background-position: center;
+}
+
+.side-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thumb {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+/* -------------------------------------------
+   Fiche Technique (Bandeau de spécifications)
+------------------------------------------- */
+.specs-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--white);
+    padding: 25px 4%;
+    border-bottom: 1px solid #EAEAEA;
+    text-align: center;
+}
+
+.spec-item strong {
+    display: block;
+    font-size: 20px;
+    color: var(--accent);
+    font-family: var(--font-titles);
+}
+
+.spec-item span {
+    font-size: 12px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* -------------------------------------------
+   Conteneur et Colonnes
+------------------------------------------- */
+.detail-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 50px;
+    height: 1500px;
+}
+
+.content-left {
+    flex: 2;
+}
+
+.content-right {
+    flex: 1;
+}
+
+/* Infos d'en-tête du Bien */
+.back-link {
+    display: block;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.property-heading h1 {
+    font-family: var(--font-titles);
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.price-tag {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 30px;
+}
+
+/* Description */
+.description-section {
+    margin-bottom: 40px;
+}
+
+.description-section h3 {
+    font-family: var(--font-titles);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.description-section p {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+/* Module Lifestyle / Quartier */
+.lifestyle-widget {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.lifestyle-widget h3 {
+    font-family: var(--font-titles);
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.score-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.score-number {
+    background-color: var(--accent);
+    color: var(--white);
+    font-size: 24px;
+    font-weight: 600;
+    padding: 5px 15px;
+    border-radius: 4px;
+}
+
+.amenities-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    
+}
+
+.score-label {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.amenity {
+    margin-bottom: 15px;
+}
+
+.amenity-name {
+    display: block;
+    font-size: 23px;
+    margin-bottom: 5px;
+    color: var(--text-primary);
+}
+
+.progress-bar {
+    background-color: #EAEAEA;
+    height: 6px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.progress-fill {
+    background-color: var(--accent);
+    height: 100%;
+    border-radius: 3px;
+}
+
+/* -------------------------------------------
+   Formulaire Sticky (Colonne Droite)
+------------------------------------------- */
+.contact-card {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #EAEAEA;
+    position: sticky;
+    top: 30px; /* Devient fixe lors du défilement */
+}
+
+.contact-card h3 {
+    font-family: var(--font-titles);
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.agent-info {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1D1D1;
+    border-radius: 4px;
+    font-family: var(--font-body);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--text-primary);
+    color: var(--white);
+    border: none;
+    padding: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--accent);
+}
+
+.form-footer {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 15px;
+}
+
+/* -------------------------------------------
+   Responsive Mobile
+------------------------------------------- */
+@media (max-width: 850px) {
+    .gallery-container {
+        height: 300px;
+    }
+    .side-images {
+        display: none; /* Cache les miniatures sur mobile */
+    }
+    .specs-bar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .spec-item {
+        flex: 1 1 40%;
+    }
+    .detail-container {
+        flex-direction: column;
+    }
+    .contact-card {
+        position: static; /* Désactive l'effet fixe sur petit écran */
+    }
+}
+
+/* Réinitialisation de base et police */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styles du Footer */
+.site-footer {
+    background-color: #1a1e25; /* Bleu nuit très sombre, pro et moderne */
+    color: #cbd5e1; /* Gris clair pour une excellente lisibilité */
+    padding: 60px 0 20px 0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 220px; /* Évite que les colonnes deviennent trop étroites */
+}
+
+/* Style spécifique pour la marque/logo */
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.footer-column h3 span {
+    color: #3b82f6; /* Accentuation bleue pour le côté pro/tech */
+}
+
+.footer-column h4 {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+/* Petite barre sous les titres de colonnes */
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 2px;
+    background-color: #3b82f6;
+}
+
+.footer-column p {
+    margin-bottom: 20px;
+    color: #94a3b8;
+}
+
+/* Listes de liens */
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Effet de survol sur les liens */
+.footer-column ul li a:hover {
+    color: #3b82f6;
+    padding-left: 5px;
+}
+
+/* Icônes Réseaux Sociaux */
+.footer-socials {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background-color: #2e3542;
+    color: #ffffff;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background-color: #3b82f6;
+    transform: translateY(-3px);
+}
+
+/* Formulaire Newsletter */
+.newsletter-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter-form input[type="email"] {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #2e3542;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    color: #ffffff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-form input[type="email"]:focus {
+    border-color: #3b82f6;
+}
+
+.newsletter-form button {
+    padding: 12px 15px;
+    background-color: #3b82f6;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #2563eb;
+}
+
+/* Ligne de Copyright tout en bas */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding: 20px 20px 0 20px;
+    border-top: 1px solid #2e3542;
+    text-align: center;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* RESPONSIVE : Ajustement pour les tablettes et mobiles */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .footer-column {
+        width: 100%;
+    }
+}
